@@ -1,9 +1,13 @@
 import Image from "next/image";
 import AboutImg from "../../assets/about.jpg";
 
-export function AboutSection() {
+interface AboutSection {
+  id: string;
+}
+
+export function AboutSection({id}: AboutSection) {
   return (
-    <section className="h-screen w-full flex items-center">
+    <section className="h-screen w-full flex items-center" id={id}>
       <div className="h-[32rem] w-full bg-gray-200 flex space-x-8">
         <div className="flex">
           <div className="bg-orange-500 h-[0.25rem] w-[12rem] mt-12" />

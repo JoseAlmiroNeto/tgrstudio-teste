@@ -1,9 +1,13 @@
 import { ButtonLarge } from "../buttons/buttonLarge";
 import { LineOrange } from "../extras/lineOrange";
 
-export function ContactSection() {
+interface ContactSection {
+  id: string
+}
+
+export function ContactSection({id}: ContactSection) {
   return (
-    <section className="h-[30rem] w-full py-12 bg-[url('../assets/mountain.webp')] bg-cover bg-no-repeat">
+    <section className="h-[30rem] w-full py-12 bg-[url('../assets/mountain.webp')] bg-cover bg-no-repeat" id={id}>
       <div className="flex items-center">
         <h1 className="w-[58rem] text-2xl text-white font-bold text-center">Send me a message</h1>
         <LineOrange size="100%"/>

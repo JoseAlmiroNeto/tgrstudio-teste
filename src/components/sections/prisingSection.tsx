@@ -1,9 +1,13 @@
 import { CardsPrising } from "../extras/cardsPrising";
 import { LineOrange } from "../extras/lineOrange";
 
-export function PrisingSection() {
+interface PrisingSection {
+  id: string;
+}
+
+export function PrisingSection({id}: PrisingSection) {
   return (
-    <div className="h-screen w-full flex flex-col justify-around">
+    <div className="h-screen w-full flex flex-col justify-around" id={id}>
       <div className="flex items-center">
         <LineOrange size="100%" />
         <h1 className="w-[40rem] text-center text-2xl font-bold">Prising</h1>
