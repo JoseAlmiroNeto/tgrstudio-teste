@@ -1,3 +1,5 @@
+'use client'
+
 import { ServicesSection } from "@/components/sections/servicesSection";
 import { WelcomeSection } from "../components/sections/welcomeSection";
 import { CarouselSection } from "@/components/sections/carouselSection";
