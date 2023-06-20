@@ -1,5 +1,3 @@
-'use client'
-
 import { ServicesSection } from "@/components/sections/servicesSection";
 import { WelcomeSection } from "../components/sections/welcomeSection";
 import { CarouselSection } from "@/components/sections/carouselSection";
@@ -8,13 +6,6 @@ import { VideoSection } from "@/components/sections/VideoSection";
 import { PrisingSection } from "@/components/sections/prisingSection";
 import { ContactSection } from "@/components/sections/contactSection";
 import { FooterMain } from "@/components/layout/footerMain";
-
-export const scrollToComponent = (id: string) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 
 export default function Home() {
   return (

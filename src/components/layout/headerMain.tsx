@@ -4,9 +4,10 @@ import Image from "next/image";
 import LogoGMZ from "../../assets/logo.svg";
 import { BiMenu } from "react-icons/bi";
 import { FaPhoneAlt } from "react-icons/fa";
-import { scrollToComponent } from "@/app/page";
+
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useState } from "react";
+import { scrollToComponent } from "@/utils/scrollToComponent";
 
 export function HeaderMain() {
   const [isOpen, setIsOpen] = useState(false)
