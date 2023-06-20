@@ -14,10 +14,34 @@ export function FooterMain() {
       </div>
       <div className="space-y-4 flex flex-col items-center">
         <div className="flex items-center space-x-6">
-          <ImTwitter size={24} />
-          <ImInstagram size={20} />
-          <SiBehance size={30} />
-          <ImFacebook size={20} />
+          <a
+            href="https://twitter.com/home"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <ImTwitter size={24} />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <ImInstagram size={20} />
+          </a>
+          <a
+            href="https://www.behance.net"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <SiBehance size={30} />
+          </a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <ImFacebook size={20} />
+          </a>
         </div>
         <div className="flex items-center space-x-2">
           <FaPhoneAlt size={16} />

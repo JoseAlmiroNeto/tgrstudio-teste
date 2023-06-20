@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { LineOrange } from "../extras/lineOrange";
 import AboutImg from "../../assets/about.jpg";
 
 export function AboutSection() {
