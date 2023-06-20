@@ -1,5 +1,8 @@
 import { HeaderMain } from "@/components/layout/headerMain";
 import "./globals.css";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({ subsets: ["latin"], weight: "500" });
 
 export const metadata = {
   title: "GMZ",
@@ -13,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ fontFamily: "Verdana", position: "relative" }}>
+      <body className={roboto.className} style={{ position: "relative" }}>
         <HeaderMain />
         {children}
       </body>
