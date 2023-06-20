@@ -1,5 +1,6 @@
 <a target="_blank" href="https://tgrstudio-teste.vercel.app">Link da aplicação rodando</a>
 
+![ezgif com-video-to-gif](https://github.com/JoseAlmiroNeto/tgrstudio-teste/assets/97368866/cbbf3375-2577-414c-8912-d503c396adda)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
