@@ -7,7 +7,7 @@ export function IconsLeft() {
           fullHD:space-y-6
         ">
           <div className="w-[0.2rem] bg-white h-40
-          fullHD:w-1 fullHD:h-72"
+          fullHD:w-1 fullHD:h-60"
           />
           <a
             href="https://twitter.com/home"
@@ -46,7 +46,7 @@ export function IconsLeft() {
              />
           </a>
           <div className="w-[0.2rem] bg-white h-40
-          fullHD:w-1 fullHD:h-72" 
+          fullHD:w-1 fullHD:h-60" 
           />
         </div>
   )
