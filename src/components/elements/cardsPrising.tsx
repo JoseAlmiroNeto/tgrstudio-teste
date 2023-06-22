@@ -1,5 +1,5 @@
 import { AiFillCheckSquare } from "react-icons/ai";
-import { ButtonBuy } from "../buttons/buttonBuy";
+import { ButtonBuy } from "./buttons/buttonBuy";
 
 interface CardsPrising {
   namePlan: string;
@@ -8,9 +8,9 @@ interface CardsPrising {
 
 export function CardsPrising({ namePlan, price }: CardsPrising) {
   return (
-    <div className="w-72 h-[26rem] bg-gray-200 flex flex-col justify-evenly px-8 text-xs">
-      <h1 className="text-gray-600 font-bold text-[1.4rem]">{namePlan}</h1>
-      <h2 className="text-orange-500 font-bold text-[1.4rem]">$ {price}</h2>
+    <div className="w-72 h-[26rem] bg-gray-200 flex flex-col justify-evenly px-8 text-xs fullHD:w-[28rem] fullHD:h-[44rem] fullHD:text-2xl fullHD:px-16">
+      <h1 className="text-gray-600 font-bold text-[1.4rem] fullHD:text-4xl">{namePlan}</h1>
+      <h2 className="text-orange-500 font-bold text-[1.4rem] fullHD:text-4xl">$ {price}</h2>
       <p className="leading-relaxed">
         Perfect for small sessions and personal photo shoots with and many
         purpos

@@ -7,14 +7,14 @@ interface AboutSection {
 
 export function AboutSection({id}: AboutSection) {
   return (
-    <section className="h-screen w-full flex items-center" id={id}>
-      <div className="h-[32rem] w-full bg-gray-200 flex space-x-8">
+    <section className="h-screen w-full flex items-center fullHD:h-[48rem]" id={id}>
+      <div className="h-[32rem] w-full bg-gray-200 flex space-x-8 fullHD:h-[40rem]">
         <div className="flex">
-          <div className="bg-orange-500 h-[0.25rem] w-[12rem] mt-12" />
-          <Image src={AboutImg} alt="about-imagem" width={340} />
+          <div className="bg-orange-500 h-[0.25rem] w-48 mt-12 fullHD:h-[0.4rem] fullHD:w-56" />
+          <Image src={AboutImg} alt="about-imagem" className="w-96 fullHD:w-[26rem]" />
         </div>
-        <div className="w-[34rem] space-y-4 leading-relaxed text-sm mt-12">
-          <h1 className="text-2xl font-bold">About me</h1>
+        <div className="w-[34rem] space-y-4 leading-relaxed text-sm mt-12 fullHD:w-[37rem] fullHD:text-xl">
+          <h1 className="text-2xl font-bold fullHD:text-4xl">About me</h1>
           <p>
             I think i am a good hurnaured, very responsible, hard working and
             emotional person. I like creativity and appreciate this trit in
@@ -33,7 +33,7 @@ export function AboutSection({id}: AboutSection) {
           </div>
 
           <h2 className="font-bold">My favourite thinks:</h2>
-          <ul className="list-disc ml-4 space-y-1">
+          <ul className="list-disc ml-4 space-y-1 fullHD:space-y-2">
             <li>basketball</li>
             <li>travel</li>
             <li>camping</li>
