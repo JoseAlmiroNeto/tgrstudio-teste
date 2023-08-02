@@ -1,67 +1,71 @@
-'use client'
-
+"use client";
+import { useEffect } from "react";
 import Image from "next/image";
 import LogoGMZ from "../../assets/logo.svg";
 import { BiMenu } from "react-icons/bi";
 import { FaPhoneAlt } from "react-icons/fa";
+import { Button } from "../ui/button";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarTrigger,
+} from "../ui/menubar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import { AiOutlineCloseCircle } from "react-icons/ai";
-import { useState } from "react";
-import { scrollToComponent } from "@/utils/scrollToComponent";
 
 export function HeaderMain() {
-  const [isOpen, setIsOpen] = useState(false)
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen)
-  }
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
-    <header className="flex justify-between text-xs absolute z-20 text-white w-full px-24 py-8 
-      fullHD:text-xl fullHD:px-36 fullHD:py-14
-    ">
-      <div className="flex items-center space-x-2">
-        <Image src={LogoGMZ} alt="logo-gmz" className="w-12 fullHD:w-20" />
-        <p>Professional Photografer</p>
+    <header className="w-full flex justify-between text-white text-xl xl:text-sm 2xl:text-xl px-14 lg:px-24 2xl:px-32 py-6 2xl:py-10 absolute z-10">
+      <div className="flex items-center gap-4" data-aos="fade-right">
+        <Image
+          src={LogoGMZ}
+          alt="logo"
+          className="h-14 w-14 2xl:h-20 2xl:w-20"
+        />
+        <p className="hidden sm:block">Professional Photografer</p>
       </div>
-
-      <div className="flex items-center space-x-12">
-        <div className="flex items-center space-x-2">
-          <FaPhoneAlt size={22} />
-          <p>+1(404)654-37-91</p>
-        </div>
-
-        <div className="flex space-x-3">
-          <button className="transition-colors hover:text-orange-400">
-            UA
-          </button>
-          <button className="text-orange-500 transition-colors hover:text-orange-400">
+      <div className="flex items-center space-x-8" data-aos="fade-left">
+        <p className="hidden lg:flex items-center gap-3">
+          <FaPhoneAlt />
+          +1(404)654-37-91
+        </p>
+        <div className="hidden lg:flex space-x-3">
+          <Button className="p-0 text-xl xl:text-sm 2xl:text-xl hover:text-orange-400 focus:text-orange-500">
+            US
+          </Button>
+          <Button className="p-0 text-xl xl:text-sm 2xl:text-xl hover:text-orange-400 focus:text-orange-500">
             FN
-          </button>
-          <button className="transition-colors hover:text-orange-400">
+          </Button>
+          <Button className="p-0 text-xl xl:text-sm 2xl:text-xl hover:text-orange-400 focus:text-orange-500">
             RU
-          </button>
+          </Button>
         </div>
 
-        <button onClick={toggleSidebar}>
-          <BiMenu size={42} />
-        </button>
-      </div>
-
-      <div
-        className={`h-screen w-64 py-8 px-4 space-y-2 absolute top-0 right-1 z-40 bg-[#b9917a] fullHD:w-80 
-          ${isOpen ? 'sidebar-open' : 'hidden'}`}
-      >
-        <button onClick={toggleSidebar}>
-          <AiOutlineCloseCircle size={28} />
-        </button>
-        <div className="space-y-8 text-xl flex flex-col items-center fullHD:text-3xl">
-          <button onClick={() => {scrollToComponent('works'); toggleSidebar()}} className="transition-colors hover:text-gray-400">Works</button>
-          <button onClick={() => {scrollToComponent('about'); toggleSidebar()}} className="transition-colors hover:text-gray-400">About me</button>
-          <button onClick={() => {scrollToComponent('video'); toggleSidebar()}} className="transition-colors hover:text-gray-400">Video</button>
-          <button onClick={() => {scrollToComponent('price'); toggleSidebar()}} className="transition-colors hover:text-gray-400">Prising</button>
-          <button onClick={() => {scrollToComponent('contact'); toggleSidebar()}} className="transition-colors hover:text-gray-400">Contact</button>
-        </div>
+        <Menubar className="p-0 border-0">
+          <MenubarMenu>
+            <MenubarTrigger className="p-0 cursor-pointer">
+              <BiMenu className="h-8 w-8 2xl:h-10 2xl:w-10" />
+            </MenubarTrigger>
+            <MenubarContent
+              align="center"
+              className="bg-black text-white border-gray-800 rounded"
+            >
+              <MenubarItem className="hover:bg-gray-700 rounded cursor-pointer">Works</MenubarItem>
+              <MenubarItem className="hover:bg-gray-700 rounded cursor-pointer">About</MenubarItem>
+              <MenubarItem className="hover:bg-gray-700 rounded cursor-pointer">Video</MenubarItem>
+              <MenubarItem className="hover:bg-gray-700 rounded cursor-pointer">Price</MenubarItem>
+              <MenubarItem className="hover:bg-gray-700 rounded cursor-pointer">Contact</MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+        </Menubar>
       </div>
     </header>
   );

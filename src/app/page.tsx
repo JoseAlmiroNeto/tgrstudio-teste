@@ -1,22 +1,22 @@
-import { ServicesSection } from "@/components/sections/servicesSection";
-import { WelcomeSection } from "../components/sections/welcomeSection";
-import { CarouselSection } from "@/components/sections/carouselSection";
-import { AboutSection } from "@/components/sections/aboutSection";
-import { VideoSection } from "@/components/sections/VideoSection";
-import { PrisingSection } from "@/components/sections/prisingSection";
-import { ContactSection } from "@/components/sections/contactSection";
 import { FooterMain } from "@/components/layout/footerMain";
+import { VideoSection } from "@/components/layout/VideoSection";
+import { AboutSection } from "@/components/layout/AboutSection";
+import { CarouselSection } from "@/components/layout/CarouselSection";
+import { ContactSection } from "@/components/layout/ContactSection";
+import { PrisingSection } from "@/components/layout/PrisingSection";
+import { ServicesSection } from "@/components/layout/ServicesSection";
+import { WelcomeSection } from "@/components/layout/WelcomeSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full">
+    <main className="min-h-screen w-full leading-relaxed">
       <WelcomeSection />
       <ServicesSection />
-      <CarouselSection id="works" />
-      <AboutSection id="about" />
-      <VideoSection id="video"/>
-      <PrisingSection id="price" />
-      <ContactSection id="contact" />
+      <CarouselSection />
+      <AboutSection />
+      <VideoSection />
+      <PrisingSection />
+      <ContactSection />
       <FooterMain />
     </main>
   );

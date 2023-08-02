@@ -1,9 +1,9 @@
 export const VideoPlayer = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center" data-aos="zoom-in">
       <iframe
-        src="https://www.youtube.com/embed/sVnfv3-SeuU"
-        className="w-full h-[40rem] fullHD:h-[50rem]"
+        src="https://www.youtube.com/embed/X7jKb7sUDAc"
+        className="w-full h-[90vh]"
       />
     </div>
   );

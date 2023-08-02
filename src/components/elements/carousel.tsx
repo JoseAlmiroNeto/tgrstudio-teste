@@ -26,7 +26,7 @@ export const Carrossel = () => {
       showThumbs={false}
       showStatus={false}
       centerMode={true}
-      centerSlidePercentage={33.3}
+      centerSlidePercentage={38}
     >
       {images.map((img, index: number) => {
         return (

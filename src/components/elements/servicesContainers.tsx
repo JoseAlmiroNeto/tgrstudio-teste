@@ -6,11 +6,13 @@ interface Icon {
 
 export function ServicesContainers({ icon, title, description }: Icon) {
   return (
-    <div className="w-64 h-36 flex flex-col items-center justify-start space-y-3 fullHD:h-44">
-      {icon}
+    <div className="w-64 h-36 flex flex-col items-center space-y-3">
+      <div className="h-10 w-10 lg:h-14 lg:w-14">{icon}</div>
       <div className="flex flex-col items-center space-y-1">
-        <p className="text-xl font-bold fullHD:text-2xl">{title}</p>
-        <p className="text-center text-sm leading-relaxed fullHD:text-lg">{description}</p>
+        <p className="text-base lg:text-xl font-bold">{title}</p>
+        <p className="text-center text-xs lg:text-sm leading-relaxed :text-lg">
+          {description}
+        </p>
       </div>
     </div>
   );
